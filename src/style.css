@@ -74,6 +74,7 @@ width: 1470px;
 height: 1500px;
 left: 0px;
 top: 600px;
+object-fit: cover;
 }
 
 h1{
