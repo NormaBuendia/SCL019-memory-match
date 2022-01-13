@@ -1,9 +1,11 @@
-img {
+/*img {
 max-width: 100%;
 max-height: 100%;
-}
+}*/
 .logo.pokemon {
 position:absolute;
+width:auto;
+height:auto;
 left: 0px;
 top: -2px;
 mix-blend-mode: hard-light;
@@ -31,6 +33,7 @@ font-size: 18px;
 line-height: 14px;
 /* identical to box height */
 color:blue;
+list-style: none;
 }
 
 .videos{
@@ -38,15 +41,20 @@ position: absolute;
 width: 87px;
 height: 12px;
 left: 620px;
+<<<<<<< HEAD
 top: 17px;
 list-style: none;
+=======
+top: 8px;
+>>>>>>> 5624311c07d06ed1983c970406a19afc28853eb7
 font-family: Roboto;
 font-style: normal;
 font-weight: bold;
 font-size: 18px;
 line-height: 14px;
-    
+list-style: none;
 color: blue;
+
 }
 
 .enlaces{
@@ -65,10 +73,11 @@ font-size: 18px;
 line-height: 14px;
 /* identical to box height */
 color:blue;
+list-style: none;
 }
 
 .main{
-background: url(./img/Pokemon1.jpg) no-repeat center top; 
+background: url(./img/pikachu.background.png) no-repeat center top; 
 background-size: cover;
 position: absolute;
 width: 1470px;
