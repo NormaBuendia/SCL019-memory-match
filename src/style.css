@@ -1,7 +1,7 @@
-/*img {
+img {
 max-width: 100%;
 max-height: 100%;
-}*/
+}
 .logo.pokemon {
 position:absolute;
 width:auto;
@@ -11,65 +11,58 @@ top: -2px;
 mix-blend-mode: hard-light;
 }
 
-.menu {
-position: absolute;
-width: 1470px;
-height: 50px;
-left: 0px;
-top: 560px;
-border: 3px;
-background:#E5E5E5;
+.header{
+    background-color: #656D8D;
+    height: 80px;
+    width: 100%;
 }
+
+.nav{
+  display:flex;
+  justify-content: space-between;
+  max-width: 992px ;
+  margin: 0 auto;
+
+}
+
 .home{
-position: absolute;
-width: 32px;
-height: 13px;
-left: 200px;
-top: 9px;
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 14px;
-/* identical to box height */
-color:blue;
-list-style: none;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 80px;
+  padding: 0 40px;
 }
 
-.videos{
-position: absolute;
-width: 87px;
-height: 12px;
-left: 620px;
-top: 8px;
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 14px;
-list-style: none;
-color: blue;
+.nav-menu{
+  display: flex;
+  margin-right: 40px;
+}
+
+
+.nav-menu-link{
+  color:white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  list-style: none;
+  font-family: sans-serif;
+  margin: 0 10px;
+  line-height: 50px;
+  color: white;
+  font-family: sans-serif;
+  
 
 }
 
-.enlaces{
-position: absolute;
-width: 42px;
-height: 14px;
-left: 1100px;
-top: 8px;
-    
-/* TitleMenu */
-    
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 14px;
-/* identical to box height */
-color:blue;
-list-style: none;
+.nav-menu-link:hover{
+  background-color: thistle;
+  transition: 0.5s;
+
+
 }
+
+
 
 .main{
 background: url(./img/pikachu.background.png) no-repeat center top; 

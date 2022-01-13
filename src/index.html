@@ -8,60 +8,64 @@
 </head>
 
 <body>
-  <header>
-    <section>
-      <figure><img class="logo.pokemon" src="img/Logo.Pokemon.png" alt="logo.pokemon" >
-      </figure>
-    </section>
+ <!--Se modifico la ubicacion del header, para configurar la barra de nav-->
+  <section>
+    <figure><img class="logo.pokemon" src="img/Logo.Pokemon.png" alt="logo.pokemon">
+    </figure>
+  </section>
 
-    <nav class="menu">
-      <li class="home"> HOME </li>
-      <li class="videos"> VIDEO </li>
-      <li class="enlaces"> ENLACES </li>
+  <header class="header">
+    <!---Se Cambiaron "class" para el menu de navegacion. Revisar caracteristicas en CSS-->
+    <nav class="nav">
+      <a href="#" class="home">HOME</a> <!--Este sera el menu que llevara al HOME-->
+      <ul class="nav-menu">
+       <a href="#" class="nav-menu-link"> REGISTRO </a>
+       <a href="#" class="nav-menu-link"> VIDEO </a>
+       <a href="#" class="nav-menu-link"> ENLACES </a>
+      </ul>
     </nav>
 
   </header>
+
   <main class="main">
     <section>
       <h1>
-        BIENVENIDOS 
-        JUGADORES 
+        BIENVENIDOS
+        JUGADORES
         REGISTRATE
       </h1>
       <button type="button" id="aqui"> AQUI </button>
 
       <h2>PONTE A JUGAR CON ESTOS 3 PASOS</h2>
 
-      <p id="paso1"> PASO  1 
+      <p id="paso1"> PASO 1
         Escoge tu personaje</p>
 
-      <p1 id="paso2"> PASO  2
+      <p1 id="paso2"> PASO 2
         Consigue la mayor cantidad de cartas iguales </p1>
-      
-      
-      <p2 id="paso3">   PASO 3 <br>
-         Se un entrenador Pokemon</p2>
+
+
+      <p2 id="paso3"> PASO 3 <br>
+        Se un entrenador Pokemon</p2>
 
     </section>
 
   </main>
 
- <footer>
-   <figure><img class="instagram" src="img/instagram.png"></figure>
+  <footer>
+    <figure><img class="instagram" src="img/instagram.png"></figure>
 
-   <img class="facebook" src="img/face.png">
-   <br>
-<figure>
-   <img class="memorymatch" src="img/Logo2 MemoryMatch.png"></figure>
-   <figure><img src="img/cr.png" id="copyrigth" alt=""></figure>
-   <p id="textocopyrigth">copyrigth</p>
- </footer>
+    <img class="facebook" src="img/face.png">
+    <br>
+    <figure>
+      <img class="memorymatch" src="img/Logo2 MemoryMatch.png">
+    </figure>
+    <figure><img src="img/cr.png" id="copyrigth" alt=""></figure>
+    <p id="textocopyrigth">copyrigth</p>
+  </footer>
 
   <div id="root"></div>
   <script src="main.js" type="module"></script>
 </body>
 
 </html>
-
-  
-
