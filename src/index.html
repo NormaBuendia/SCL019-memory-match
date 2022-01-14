@@ -4,68 +4,79 @@
 <head>
   <meta charset="utf-8">
   <title>Memory Match</title>
-  <link rel="stylesheet" href="style.css" media="screen and (min-width:768px)" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
- <!--Se modifico la ubicacion del header, para configurar la barra de nav-->
-  <section>
-    <figure><img class="logo.pokemon" src="img/Logo.Pokemon.png" alt="logo.pokemon">
-    </figure>
-  </section>
 
-  <header class="header">
-    <!---Se Cambiaron "class" para el menu de navegacion. Revisar caracteristicas en CSS-->
-    <nav class="nav">
-      <a href="#" class="home">HOME</a> <!--Este sera el menu que llevara al HOME-->
-      <ul class="nav-menu">
-       <a href="#" class="nav-menu-link"> REGISTRO </a>
-       <a href="#" class="nav-menu-link"> VIDEO </a>
-       <a href="#" class="nav-menu-link"> ENLACES </a>
-      </ul>
-    </nav>
+  <div class="contenedor">
+    <header class="header">
 
-  </header>
+      <figure><img class="logo.pokemon" src="img/Logo.Pokemon.png" alt="logo.pokemon">
+      </figure>
+      <nav class="nav">
+        <a href="#" class="home">HOME</a>
+        <!--Este sera el menu que llevara al HOME-->
+        <ul class="nav-menu">
+          <a href="#" class="nav-menu-link"> REGISTRO </a>
+          <a href="#" class="nav-menu-link"> VIDEO </a>
+          <a href="#" class="nav-menu-link"> ENLACES </a>
+        </ul>
+      </nav>
+    </header>
 
-  <main class="main">
-    <section>
-      <h1>
-        BIENVENIDOS
-        JUGADORES
-        REGISTRATE
-      </h1>
-      <button type="button" id="aqui"> AQUI </button>
+    <main > <img class="main"src="img/pikachu.background.png" alt="">
+             <h1>
+          BIENVENIDOS
+          JUGADORES
+          REGISTRATE
+        </h1>
+        <button type="button" id="aqui"> AQUI
 
-      <h2>PONTE A JUGAR CON ESTOS 3 PASOS</h2>
+        </button>
 
-      <p id="paso1"> PASO 1
-        Escoge tu personaje</p>
+        <h2>PONTE A JUGAR CON ESTOS 3 PASOS
 
-      <p1 id="paso2"> PASO 2
-        Consigue la mayor cantidad de cartas iguales </p1>
+        </h2>
+
+        <p id="paso1"> PASO 1
+          Escoge tu personaje
+        </p>
+
+        <p1 id="paso2"> PASO 2
+          Consigue la mayor cantidad de cartas iguales
+        </p1>
 
 
-      <p2 id="paso3"> PASO 3 <br>
-        Se un entrenador Pokemon</p2>
+        <p2 id="paso3"> PASO 3 <br>
+          Se un entrenador Pokemon
+        </p2>
 
-    </section>
+     
+    </main>
 
-  </main>
+    <footer>
+      <figure>
+        <img class="instagram" src="img/instagram.png">
+      </figure>
 
-  <footer>
-    <figure><img class="instagram" src="img/instagram.png"></figure>
+      <figure><img class="facebook" src="img/face.png">
+      </figure>
 
-    <img class="facebook" src="img/face.png">
-    <br>
-    <figure>
-      <img class="memorymatch" src="img/Logo2 MemoryMatch.png">
-    </figure>
-    <figure><img src="img/cr.png" id="copyrigth" alt=""></figure>
-    <p id="textocopyrigth">copyrigth</p>
-  </footer>
+      <figure>
+        <img class="memorymatch" src="img/Logo2 MemoryMatch.png">
+      </figure>
 
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
+      <figure>
+        <img src="img/cr.png" id="copyrigth" alt="">
+      </figure>
+      <p id="textocopyrigth">copyrigth</p>
+    </footer>
+
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
+  </div>
 </body>
+
 
 </html>

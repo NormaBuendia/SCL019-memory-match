@@ -1,105 +1,135 @@
-/*img {
-max-width: 100%;
-max-height: 100%;
-}*/
+
+body{
+    font-size:16px; 
+    font-weight:300; 
+/* lo agregue para definir el tamano de letra */
+}
+
+
+ /*lo agregue para definir la ubicacion de cartas */
+.contenedor{
+ flex-wrap: wrap;
+}
+
+/* lo agregue para definir la ubicacion de logo pokemon */
+.header{
+grid-area: header;
+padding: 0px;
+margin:0;
+}
+
 .logo.pokemon {
+border: 0;
+padding: 0;
+margin: 0;
+display:inline-block;
+justify-content: center;
+align-items: center;
 position:absolute;
 width:auto;
 height:auto;
-left: 0px;
-top: -2px;
+max-width: 100%;
+left: 3.125em;
+top: -12.5em;
 mix-blend-mode: hard-light;
 }
 
-/*.header{
-    background-color: #656D8D;
-    height: 80px;
-    width: 100%;
-}*/
+img{
+max-width: 100%;
+max-height: 100%;
+display: inline-block;
+}
 
 .nav{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  /*max-width: 100% ;*/
-  margin: 0 auto;
-  background-color:#656D8D;
-  height: 80px;
-  /*width: 100%;*/
-
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color:#656D8D;
+    max-width: 100%;
+    height: 80px;
+    width: 100%;   
 }
 
 .home{
-  color: white;
-  font-family: sans-serif;
-  text-decoration: none;
-  font-weight: bold;
-  line-height: 80px;
-  padding: 0 40px;
+color: white;
+font-family: sans-serif;
+text-decoration: none;
+font-weight: bold;
+line-height: 80px;
+padding: 0 40px;
 }
 
+
 .nav-menu{
-  display: flex;
-  margin-right: 40px;
+display: flex;
+margin-right: 40px;
 }
 
 
 .nav-menu-link{
-  color:white;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  list-style: none;
-  font-family: sans-serif;
-  margin: 0 10px;
-  line-height: 50px;
-  color: white;
-  font-family: sans-serif;
-  
-
+color:white;
+text-decoration: none;
+padding: 8px 12px;
+border-radius: 5px;
+list-style: none;
+font-family: sans-serif;
+margin: 0 10px;
+line-height: 50px;
+color: white;
+font-family: sans-serif;
 }
 
 .nav-menu-link:hover{
-  background-color: thistle;
-  transition: 0.5s;
-
+background-color: thistle;
+transition: 0.5s;
 
 }
 
 
 
 .main{
-background: url(./img/pikachu.background.png) no-repeat center top; 
-background-size:auto;
-position: absolute;
-width: auto;
-height: auto;
-left: 0px;
-top: 600px;
-object-fit: cover;
+
+    display:inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width:100% ;
+    height: 100%;
+    margin: 0 auto;
+    object-fit:fill;
+    
+
+/*
+display: flex;
+max-width: 100%;
+width:100%;
+height:100%;
+object-fit: cover;*/
+
 }
 
 h1{
-list-style:100px;
+list-style:6.25em;
 position: absolute;
-width: 140px;
+width: 8.75em;
 text-align: center;
-height: 1500px;
-left: 300px;
-top: 400px;
-font-size:30px;   
+height: 93.75em;
+left: 18.75em;
+top: 25em;
+font-size:1.875em;   
 }
 #aqui{
 position: absolute;
-width: 100px;
-height: 35px;
+width: 6.25em;
+height: 2.1875em;
 left: 350px;
 top: 530px;
 font-family: Roboto;
 font-style: normal;
 font-weight: 800;
-font-size: 20px;
-line-height: 23px;
+font-size: 1.25em;
+line-height: 1.4375em;
 color: #238DD9;
 }
 
@@ -112,53 +142,53 @@ top: 1000px;
 font-family: Roboto;
 font-style: normal;
 font-weight: 800;
-font-size: 30px;
-line-height: 18px;
+font-size: 1.875em;
+line-height: 1.125em;
 text-align: right;
 color: #FFFFFF;   
 }
 #paso1{
 position: absolute;
-width: 100px;
-height: 100px;
-left: 150px;
-top: 1080px; 
+width: 6.25em;
+height: 6.25em;
+left: 9.375em;
+top: 67.5em; 
 background: grey;
 font-family: Roboto;
 font-style: normal;
 font-weight: 100;
-font-size: 22px;
-line-height: 33px;
+font-size: 1.375em;
+line-height: 2.0625em;
 text-align:center;
 color: #FFFFFF;
 }  
 #paso2{
 position: absolute;
-width: 130px;
-height: 200px;
-left: 340px;
-top: 1100px; 
+width: 8.125em;
+height: 12.5em;
+left: 21.25em;
+top: 68.75em; 
 background: grey;
 font-family: Roboto;
 font-style: normal;
 font-weight: 100;
-font-size: 22px;
-line-height: 33px;
+font-size: 1.375em;
+line-height: 2.062em;
 text-align:center;
 color: #FFFFFF;
 } 
 #paso3{
 position: absolute;
-width: 110px;
-height: 150px;
-left: 565px;
-top: 1100px; 
+width: 6.875em;
+height: 9.375em;
+left: 35.3125em;
+top: 68.75em; 
 background: grey;
 font-family: Roboto;
 font-style: normal;
 font-weight: 100;
-font-size: 22px;
-line-height: 33px;
+font-size: 1.375em;
+line-height: 2.0625em;
 text-align:center;
 color: #FFFFFF;
 }  
@@ -167,40 +197,41 @@ color: #FFFFFF;
 position: absolute;
 width: 50px;
 height: 50px;
-left: 550px;
-top: 2120px;
+left: 34.375em;
+top: 132.5em;
+display:flex;
 }
 
 .facebook {
 position: absolute;
 width: 50px;
 height: 50px;
-left: 650px;
-top: 2120px;
+left: 40.625em;
+top: 132.5em;
+display: flex;
 }
 
 .memorymatch{
 position: absolute;
-display:flex;
-
 width: 100%;
-max-width: 100%;
-left: 0;
-top: 2550;
+height: auto;
+left: 10px;
+top: 2150px;
+
 }
 #copyrigth{
 position: absolute;
-width: 50px;
-height:50px;
-left: 520px;
-top: 2450px;   
+width: 3.125em;
+height:3.125em;
+left: 32.5em;
+top: 153.125em;   
 }        
 #textocopyrigth{
 position: absolute;
-width: 50px;
-height:50px;
-left: 580px;
-top: 2420px;
-font-size:30px;
+width: 3.125em;
+height:3.125em;
+left: 36.25em;
+top: 151.25em;
+font-size:1.875em;
 }  
 
