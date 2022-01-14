@@ -1,7 +1,7 @@
-img {
+/*img {
 max-width: 100%;
 max-height: 100%;
-}
+}*/
 .logo.pokemon {
 position:absolute;
 width:auto;
@@ -11,17 +11,21 @@ top: -2px;
 mix-blend-mode: hard-light;
 }
 
-.header{
+/*.header{
     background-color: #656D8D;
     height: 80px;
     width: 100%;
-}
+}*/
 
 .nav{
   display:flex;
   justify-content: space-between;
-  max-width: 992px ;
+  align-items: center;
+  /*max-width: 100% ;*/
   margin: 0 auto;
+  background-color:#656D8D;
+  height: 80px;
+  /*width: 100%;*/
 
 }
 
@@ -66,10 +70,10 @@ mix-blend-mode: hard-light;
 
 .main{
 background: url(./img/pikachu.background.png) no-repeat center top; 
-background-size: cover;
+background-size:auto;
 position: absolute;
-width: 1470px;
-height: 1500px;
+width: auto;
+height: auto;
 left: 0px;
 top: 600px;
 object-fit: cover;
@@ -177,10 +181,12 @@ top: 2120px;
 
 .memorymatch{
 position: absolute;
-width: 1200px;
-height: 300px;
-left: 100px;
-top: 2150px;
+display:flex;
+
+width: 100%;
+max-width: 100%;
+left: 0;
+top: 2550;
 }
 #copyrigth{
 position: absolute;
