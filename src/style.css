@@ -1,7 +1,12 @@
 
 body{
-    font-size:16px; 
-    font-weight:300; 
+font-size:16px; 
+padding: 1 px 1 px 1px 1 px;
+margin:0;
+max-width: 1200px;
+width: 100%;
+height: 100vh;
+
 /* lo agregue para definir el tamano de letra */
 }
 
@@ -13,7 +18,6 @@ body{
 }
 
 /* lo agregue para definir la ubicacion de logo pokemon */
-
 
 .logo.pokemon {
 border: 0;
@@ -32,6 +36,11 @@ mix-blend-mode: hard-light;
 
 }
 
+img{
+max-width: 100%;
+max-height: 100%;
+display: flex;
+}
 
 /*.header{
     background-color: #656D8D;
@@ -46,8 +55,9 @@ mix-blend-mode: hard-light;
   /*max-width: 100% ;*/
   margin: 0 auto;
   background-color:#656D8D;
-  height: 80px;
-  /*width: 100%;*/
+  max-width: 100%;
+  height: 5em;
+  width: 100%;
 
 }
 
@@ -56,15 +66,14 @@ mix-blend-mode: hard-light;
   font-family: sans-serif;
   text-decoration: none;
   font-weight: bold;
-  line-height: 80px;
-  padding: 0 40px;
+  line-height: 5em;
+  padding: 0 2.5em;
 }
 
 .nav-menu{
   display: flex;
-  margin-right: 40px;
+  margin-right: 2.5em;
 }
-
 
 .nav-menu-link{
   color:white;
@@ -79,170 +88,159 @@ mix-blend-mode: hard-light;
   font-family: sans-serif;
 }
 
-
-.nav-menu{
-display: flex;
-margin-right: 40px;
-}
-
-
 .nav-menu-link:hover{
   background-color: thistle;
   transition: 0.5s;
-
-
-
 }
 
-
-
-.main{
-
-background: url(./img/pikachu.background.png) no-repeat center top; 
-background-size:auto;
-position: absolute;
-width: auto;
-height: auto;
-left: 0px;
-top: 600px;
-object-fit: cover;
-
+main{
+display: inline-flex;
+align-items: center;
+background-image: url("./img/pikachu.background.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+max-width: 100%;
+width: 100%;
+height: 120vh;
+margin: 0;
+padding: 0;
 }
 
 h1{
+display: none;
 list-style:6.25em;
-position: absolute;
 width: 8.75em;
 text-align: center;
 height: 93.75em;
-left: 18.75em;
 top: 25em;
 font-size:1.875em;   
 }
 #aqui{
-position: absolute;
+display:none;
 width: 6.25em;
 height: 2.1875em;
 left: 350px;
 top: 530px;
-font-family: Roboto;
+font-family:sans-serif;
 font-style: normal;
 font-weight: 800;
 font-size: 1.25em;
 line-height: 1.4375em;
 color: #238DD9;
+
+}
+
+.texto-instrucciones{
+display: inline-block;
+text-align: center;
+padding:27em 0 0 0 ;
 }
 
 h2{
-position: absolute;
-width: 800px;
-height: 17px;
-left: -100px;
-top: 1000px; 
-font-family: Roboto;
+position:flex;
+font-family:sans-serif;
 font-style: normal;
 font-weight: 800;
 font-size: 1.875em;
+border-style: black;
 line-height: 1.125em;
-text-align: right;
-color: #FFFFFF;   
+color: lightyellow;
+border-style: rgb(243, 231, 231);   
+}
+
+.pasos{
+display: flex;
+flex-direction: column;
+align-items:center;
+justify-content: space-between;
+padding:25em 6em 0 0 ;
+gap: 30px 30px;
+ 
 }
 #paso1{
-position: absolute;
-width: 6.25em;
-height: 6.25em;
-left: 9.375em;
-top: 67.5em; 
-background: grey;
-font-family: Roboto;
-font-style: normal;
+display:flex;
+justify-self:center;
+align-items: center;
+max-width: 100%;
+width: 100%;
+height: 100%;
+border-radius: 0.625em; 
+background: rgb(116, 87, 87);
+font-family: sans-serif;
+font-style:normal;
 font-weight: 100;
-font-size: 1.375em;
-line-height: 2.0625em;
-text-align:center;
-color: #FFFFFF;
+font-size: 1.5em;
+text-align: center;
+line-height: 1.8em;
+color:rgb(197, 202, 207);
+box-shadow: 8px 16px 0 rgb(70, 66, 66);
 }  
 #paso2{
-position: absolute;
-width: 8.125em;
-height: 12.5em;
-left: 21.25em;
-top: 68.75em; 
-background: grey;
-font-family: Roboto;
+display: flex;
+justify-self:center;
+align-items: center;
+max-width: 100%;
+width: 100%;
+height: 100%;
+border-radius: 0.625em; 
+background: rgb(116, 87, 87);
+font-family:sans-serif;
 font-style: normal;
-font-weight: 100;
-font-size: 1.375em;
-line-height: 2.062em;
-text-align:center;
-color: #FFFFFF;
+font-weight: 80;
+font-size: 1.5em;
+text-align: center;
+line-height: 1.8em;
+color:rgb(197, 202, 207);
+box-shadow: 8px 16px 0 rgb(70, 66, 66);
 } 
 #paso3{
-position: absolute;
-width: 6.875em;
-height: 9.375em;
-left: 35.3125em;
-top: 68.75em; 
-background: grey;
-font-family: Roboto;
+display: flex;
+justify-self:center;
+align-items: center;
+max-width: 100%;
+width: 100%;
+height: 200%;
+border-radius:0.625em ;
+background: rgb(116, 87, 87);
+font-family: sans-serif;
 font-style: normal;
 font-weight: 100;
-font-size: 1.375em;
-line-height: 2.0625em;
+font-size: 1.8em;
+line-height: 1.5em;
 text-align:center;
-color: #FFFFFF;
+color:rgb(197, 202, 207);
+box-shadow: 8px 16px 0 rgb(70, 66, 66);
 }  
 
 .footer{
-display:block;
-justify-content: center;
-align-items: center;
-margin: 0 auto;
-background-color:#656D8D;
-max-width: 100%;
-height: 80px;
-width: 100%;   
+background-color:lightgray; 
 }
 
-.footer .instagram {
-position:relative;
-width: 1%;
-height: 1%;
-}
-
-.facebook {
-position: absolute;
-width: 50px;
-height: 50px;
-left: 40.625em;
-top: 132.5em;
+.contenedor-imagenes{
 display: flex;
+justify-content: space-evenly;
+align-items:center;
+flex-direction:column;
+max-width: 100%;
+width: 100%;
 }
 
 .memorymatch{
-position: absolute;
-
-display:flex;
-
-width: 100%;
-max-width: 100%;
-left: 0;
-top: 2550;
-
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex;
+  align-items:center;
 }
-#copyrigth{
-position: absolute;
-width: 3.125em;
-height:3.125em;
-left: 32.5em;
-top: 153.125em;   
-}        
-#textocopyrigth{
-position: absolute;
-width: 50px;
-height:50px;
-left: 580px;
-top: 1800px;
-font-size:30px;
-}  
-
+.textocopyrigth{
+  font-size: 2em;
+  width: 60%;
+  text-align:center;
+  justify-content:flex-end;
+  }
+  
+.instagram{
+width: 5%;
+padding: 1.25em 0 0 30em;
+}
