@@ -1,7 +1,8 @@
 
 body{
-    font-size:16px; 
-    font-weight:300; 
+  font-family: 'Roboto', sans-serif;
+  font-size:16px; 
+  font-weight:300; 
 /* lo agregue para definir el tamano de letra */
 }
 
@@ -32,6 +33,12 @@ mix-blend-mode: hard-light;
 
 }
 
+img{
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  }
+  
 
 /*.header{
     background-color: #656D8D;
@@ -46,8 +53,9 @@ mix-blend-mode: hard-light;
   /*max-width: 100% ;*/
   margin: 0 auto;
   background-color:#656D8D;
+  max-width: 100%;
   height: 80px;
-  /*width: 100%;*/
+  width: 100%;  
 
 }
 
@@ -80,33 +88,28 @@ mix-blend-mode: hard-light;
 }
 
 
-.nav-menu{
-display: flex;
-margin-right: 40px;
-}
-
-
 .nav-menu-link:hover{
   background-color: thistle;
   transition: 0.5s;
 
-
-
 }
 
 
-
 .main{
-
-background: url(./img/pikachu.background.png) no-repeat center top; 
-background-size:auto;
-position: absolute;
-width: auto;
-height: auto;
-left: 0px;
-top: 600px;
-object-fit: cover;
-
+  display:inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  width:100% ;
+  height: 100%;
+  margin: 0 auto;
+  object-fit:fill;
+/*
+display: flex;
+max-width: 100%;
+width:100%;
+height:100%;
+object-fit: cover;*/
 }
 
 h1{
@@ -120,7 +123,7 @@ top: 25em;
 font-size:1.875em;   
 }
 #aqui{
-position: absolute;
+/*position: absolute;
 width: 6.25em;
 height: 2.1875em;
 left: 350px;
@@ -130,7 +133,17 @@ font-style: normal;
 font-weight: 800;
 font-size: 1.25em;
 line-height: 1.4375em;
-color: #238DD9;
+color: #238DD9;*/
+
+display: inline-block;
+padding: 7px 0;
+width: 100px;
+border: 1px solid #FFFFFF;
+border-radius: 20px;
+text-align:center;
+background-color: rgb(185, 181, 185);
+
+
 }
 
 h2{
@@ -194,8 +207,8 @@ color: #FFFFFF;
 }  
 
 .footer{
-display:block;
-justify-content: center;
+display:flex;
+justify-content: space-between;
 align-items: center;
 margin: 0 auto;
 background-color:#656D8D;
@@ -204,10 +217,14 @@ height: 80px;
 width: 100%;   
 }
 
-.footer .instagram {
-position:relative;
-width: 1%;
-height: 1%;
+.instagram {
+position:absolute;
+width: 50px;
+height: 50px;
+left: 30.625em;
+top: 132.5em;
+display:flex;
+
 }
 
 .facebook {
@@ -221,13 +238,11 @@ display: flex;
 
 .memorymatch{
 position: absolute;
-
-display:flex;
-
 width: 100%;
-max-width: 100%;
+height: auto;
 left: 0;
-top: 2550;
+right: 0;
+top: 2150px;
 
 }
 #copyrigth{
