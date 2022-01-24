@@ -1,66 +1,85 @@
 
-import Pokemon from '../data/pokemon/pokemon.js';
+
+import shuffle from '../components/shuffle.js';
 
 //export default Pokemon;
 //console.log(Pokemon);
 
 const App = () => {
 
-  const cardsItems = Pokemon.items;
-  const cardsItemsTwo = Pokemon.items;
-  const cardsTotal = cardsItems.concat(cardsItemsTwo);
+  //const cardsItems = Pokemon.items;
+  //const cardsItemsTwo = Pokemon.items;
+  //const cardsTotal = cardsItems.concat(cardsItemsTwo);
 
   //Seleccionamos el board 
   //const board = document.querySelector(".board");
 
-  let i = cardsTotal.length, j, temp;
+  /*let i = cardsTotal.length, j, temp;
   while (--i > 0) {
     j = Math.floor(Math.random() * (i + 1));
     temp = cardsTotal[j];
     cardsTotal[j] = cardsTotal[i];
     cardsTotal[i] = temp;
     //return cardsTotal;
+    console.log(cardsTotal);
   }
+ */
 
-  //console.log(cardsTotal);
-
-
-  //funcion que le de un movimiento aleatorio a las cartas
-  //
-
-
-
-  // con esto crearemos la estructura
-  //const App = () => {
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
 
-  //contenedor del grid de cartas
-  const cardsGrid = document.createElement('div');
-  cardsGrid.id = 'cardsGrid';
-  cardsGrid.className = 'cardsGrid';
-  pokemonContainer.appendChild(cardsGrid);
-  //console.log(cardsGrid);
+  // recorro todas las cartas
+  for (let i = 0; i <shuffle.length; i++) {
+    //console.log(cardsTotal[i].id)
+    const card = document.createElement('div');
+    const front = document.createElement('img');
+    const back = document.createElement('img');
+    card.className = "card";
+    front.className = "front";
+    back.className = "back";
+    // creo hijo de front e inserto imagen back
+    const imgBack = document.createElement('img');
+    imgBack.appendChild(front);
+    imgBack.className = "imgBack"
+    //insertar imagen 
+    back.setAttribute('src', './img/carta-1.png');
 
-  //mostrar las cartas
-  const boardCards = () => {
-    for (let i = 0; i < cardsTotal.length; i++) {
-      //console.log(cardsTotal[i].id)
-      const boardCards = cardsTotal.innerHTML('cardsGrid')
-    
-    
+    //creo hijo de imgBack insertar imagen de frente
+    const imgFront = document.createElement('img');
+    imgFront.appendChild(imgBack);
+    imgFront.id = shuffle[i].id;
+    //insertar imagen 
+    front.setAttribute('src', shuffle[i].image);
+    pokemonContainer.appendChild(card);
+    card.appendChild(front);
+    card.appendChild(back);
+
   }
+  //funcion que le de un movimiento aleatorio a las cartas
+  //function shuffle(cardsTotal) {
+    //let i = cardsTotal.length, j, temp;
+   // while (--i > 0) {
+     // j = Math.floor(Math.random() * (i + 1));
+     // temp = cardsTotal[j];
+      //cardsTotal[j] = cardsTotal[i];
+      //cardsTotal[i] = temp;
+      //return cardsTotal;
+      //console.log(cardsTotal);
+      //return cardsTotal;
+   // }
+
+ // }
+  //console.log (shuffle ( cardsTotal ) );
+    //pokemonContainer()
+
+
+    //el.className = 'App';
+    // el.textContent = 'Hola mundo!';
+
+ return pokemonContainer;
+
 }
-
-
-
-  //el.className = 'App';
-  // el.textContent = 'Hola mundo!';
-
-  //return el;
-}
-
 export default App;
 
 

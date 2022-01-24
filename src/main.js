@@ -7,7 +7,6 @@ import App from './components/App.js';
    // location.pathname = "src/pokemon.html";
 //});
 
-var starPokemon = () => {
-document.getElementsByClassName(pokemonContainer);
-//document.getElementById('root').appendChild(App());
-}
+//var starPokemon = () => {
+//document.getElementsByClassName(pokemonContainer);
+document.getElementById('root').appendChild(App());
