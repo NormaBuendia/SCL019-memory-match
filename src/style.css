@@ -39,7 +39,7 @@ mix-blend-mode: hard-light;
 img{
 max-width: 100%;
 max-height: 100%;
-flex:auto;
+/*flex:auto;*/
 }
 
 /*.header{
@@ -244,63 +244,53 @@ width: 100%;
 width: 5%;
 padding: 1.25em 0 0 30em;
 }
+
 .pokemonContainer{
-display: flex;
-flex-wrap: wrap;
-row-gap: 5rem;
-column-gap: 5rem;
-padding:  3rem auto;
-transform-style: preserve-3d;
-perspective: 500px;
-
-  
-  
-}
-
-/*.root{
-  
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5rem;
+  column-gap: 5rem;
+  padding-left: 80px;
  
-
-}*/
-
+}
 .card {
-padding: 15%;
-width: 50%;
-height: 50%;
-position: relative;
-transform-style: rotateY( 180deg ) ;
-transition: all 2s ease;
+  width: 16%;
+  height:16%;
+  padding: 0%;
+  margin: 0 0 2% 0;
+  position: relative;
+  perspective: 1000px;
+ 
 }
 
 
-
-
-.front, .back{
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border-radius: 5px;
-  
-
-}
-.back{
-  
-  backface-visibility: hidden;
-  
-  
+.front {
+position: absolute;
+width: 100%;
+height: 100%;
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
+border-radius: 10%;
+transition: transform 1s;
+transform-style: preserve-3d;
+backface-visibility:hidden;
 }
 
-.imgBack{
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-}
-.imgFront {
-  padding: 10px;
-  width: 100%;
-  height: 100%;
+.card:hover {
+  transform: rotateY( 180deg ) ;
+  transition: transform 1.5s;
+  backface-visibility:hidden;
 }
 
-/*.pokemonContainer:hover .imgFront {
+.front:hover {
+box-shadow: 0 0 30px 20px rgb(255, 255, 255);
+
+}
+
+.back:hover {
 transform: rotateY(180deg);
-}*/
+transform: scale(.97);
+transition: transform 5s;
+transition-duration: 1s;
+box-shadow: 0 0 30px 20px rgb(255, 255, 255);
+
+}
