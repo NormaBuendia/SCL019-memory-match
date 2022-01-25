@@ -245,29 +245,62 @@ width: 5%;
 padding: 1.25em 0 0 30em;
 }
 .pokemonContainer{
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 250px 250px 250px;
-  grid-template-rows: 250px 250px 250 px;
-  padding:  3rem auto;
-  transform-style: preserve-3d;
+display: flex;
+flex-wrap: wrap;
+row-gap: 5rem;
+column-gap: 5rem;
+padding:  3rem auto;
+transform-style: preserve-3d;
+perspective: 500px;
+
+  
+  
 }
 
+/*.root{
+  
+ 
+
+}*/
+
 .card {
-padding: 10px;
-width: 100%;
-height: 100%;
+padding: 15%;
+width: 50%;
+height: 50%;
+position: relative;
+transform-style: rotateY( 180deg ) ;
+transition: all 2s ease;
 }
+
+
+
+
+.front, .back{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 5px;
+  
+
+}
+.back{
+  
+  backface-visibility: hidden;
+  
+  
+}
+
 .imgBack{
   padding: 10px;
   width: 100%;
   height: 100%;
 }
 .imgFront {
-flex:auto;
-border-width: medium;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
 }
 
-.pokemonContainer:hover .imgFront {
+/*.pokemonContainer:hover .imgFront {
 transform: rotateY(180deg);
-}
+}*/

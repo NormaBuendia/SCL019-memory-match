@@ -28,6 +28,8 @@ const App = () => {
     pokemonContainer.appendChild(card);
     card.appendChild(front);
     card.appendChild(back);
+
+    
   }
   return pokemonContainer;
 }
