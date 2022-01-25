@@ -1,36 +1,18 @@
 
-
 import shuffle from '../components/shuffle.js';
 
-//export default Pokemon;
-//console.log(Pokemon);
-
 const App = () => {
-
-  //const cardsItems = Pokemon.items;
-  //const cardsItemsTwo = Pokemon.items;
-  //const cardsTotal = cardsItems.concat(cardsItemsTwo);
-
-  //Seleccionamos el board 
-  //const board = document.querySelector(".board");
-
-  /*let i = cardsTotal.length, j, temp;
-  while (--i > 0) {
-    j = Math.floor(Math.random() * (i + 1));
-    temp = cardsTotal[j];
-    cardsTotal[j] = cardsTotal[i];
-    cardsTotal[i] = temp;
-    //return cardsTotal;
-    console.log(cardsTotal);
-  }
- */
-
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
+  // contenedor hijo de pokemonContainer, donde se guardaran las cartas
+  const cardsGrid = document.createElement('div');
+  cardsGrid.className = 'cardsGrid';
+  cardsGrid.id = 'cardsGrid';
+  pokemonContainer.appendChild(cardsGrid);
 
   // recorro todas las cartas
-  for (let i = 0; i <shuffle.length; i++) {
+  for (let i = 0; i < shuffle.length; i++) {
     //console.log(cardsTotal[i].id)
     const card = document.createElement('div');
     const front = document.createElement('img');
@@ -56,28 +38,8 @@ const App = () => {
     card.appendChild(back);
 
   }
-  //funcion que le de un movimiento aleatorio a las cartas
-  //function shuffle(cardsTotal) {
-    //let i = cardsTotal.length, j, temp;
-   // while (--i > 0) {
-     // j = Math.floor(Math.random() * (i + 1));
-     // temp = cardsTotal[j];
-      //cardsTotal[j] = cardsTotal[i];
-      //cardsTotal[i] = temp;
-      //return cardsTotal;
-      //console.log(cardsTotal);
-      //return cardsTotal;
-   // }
 
- // }
-  //console.log (shuffle ( cardsTotal ) );
-    //pokemonContainer()
-
-
-    //el.className = 'App';
-    // el.textContent = 'Hola mundo!';
-
- return pokemonContainer;
+  return pokemonContainer;
 
 }
 export default App;
