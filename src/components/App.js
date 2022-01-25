@@ -1,36 +1,11 @@
-
-
-import shuffle from '../components/shuffle.js';
-
-//export default Pokemon;
-//console.log(Pokemon);
+import shuffle from '../shuffle.js';
 
 const App = () => {
-
-  //const cardsItems = Pokemon.items;
-  //const cardsItemsTwo = Pokemon.items;
-  //const cardsTotal = cardsItems.concat(cardsItemsTwo);
-
-  //Seleccionamos el board 
-  //const board = document.querySelector(".board");
-
-  /*let i = cardsTotal.length, j, temp;
-  while (--i > 0) {
-    j = Math.floor(Math.random() * (i + 1));
-    temp = cardsTotal[j];
-    cardsTotal[j] = cardsTotal[i];
-    cardsTotal[i] = temp;
-    //return cardsTotal;
-    console.log(cardsTotal);
-  }
- */
-
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
-
   // recorro todas las cartas
-  for (let i = 0; i <shuffle.length; i++) {
+  for (let i = 0; i < shuffle.length; i++) {
     //console.log(cardsTotal[i].id)
     const card = document.createElement('div');
     const front = document.createElement('img');
@@ -44,7 +19,6 @@ const App = () => {
     imgBack.className = "imgBack"
     //insertar imagen 
     back.setAttribute('src', './img/carta-1.png');
-
     //creo hijo de imgBack insertar imagen de frente
     const imgFront = document.createElement('img');
     imgFront.appendChild(imgBack);
@@ -54,31 +28,8 @@ const App = () => {
     pokemonContainer.appendChild(card);
     card.appendChild(front);
     card.appendChild(back);
-
   }
-  //funcion que le de un movimiento aleatorio a las cartas
-  //function shuffle(cardsTotal) {
-    //let i = cardsTotal.length, j, temp;
-   // while (--i > 0) {
-     // j = Math.floor(Math.random() * (i + 1));
-     // temp = cardsTotal[j];
-      //cardsTotal[j] = cardsTotal[i];
-      //cardsTotal[i] = temp;
-      //return cardsTotal;
-      //console.log(cardsTotal);
-      //return cardsTotal;
-   // }
-
- // }
-  //console.log (shuffle ( cardsTotal ) );
-    //pokemonContainer()
-
-
-    //el.className = 'App';
-    // el.textContent = 'Hola mundo!';
-
- return pokemonContainer;
-
+  return pokemonContainer;
 }
 export default App;
 
