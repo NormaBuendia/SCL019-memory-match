@@ -1,16 +1,9 @@
-
-import shuffle from '../components/shuffle.js';
+import shuffle from '../shuffle.js';
 
 const App = () => {
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
-  // contenedor hijo de pokemonContainer, donde se guardaran las cartas
-  const cardsGrid = document.createElement('div');
-  cardsGrid.className = 'cardsGrid';
-  cardsGrid.id = 'cardsGrid';
-  pokemonContainer.appendChild(cardsGrid);
-
   // recorro todas las cartas
   for (let i = 0; i < shuffle.length; i++) {
     //console.log(cardsTotal[i].id)
@@ -26,7 +19,6 @@ const App = () => {
     imgBack.className = "imgBack"
     //insertar imagen 
     back.setAttribute('src', './img/carta-1.png');
-
     //creo hijo de imgBack insertar imagen de frente
     const imgFront = document.createElement('img');
     imgFront.appendChild(imgBack);
@@ -36,11 +28,8 @@ const App = () => {
     pokemonContainer.appendChild(card);
     card.appendChild(front);
     card.appendChild(back);
-
   }
-
   return pokemonContainer;
-
 }
 export default App;
 
