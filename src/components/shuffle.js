@@ -14,8 +14,7 @@ const shuffle = () => {
         temp = cardsTotal[j];
         cardsTotal[j] = cardsTotal[i];
         cardsTotal[i] = temp;
-    }
-    
+    }   
 };
 
 export default shuffle();
