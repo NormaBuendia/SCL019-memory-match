@@ -17,18 +17,20 @@ const App = () => {
     card.className = "card";
     front.className = "front";
     back.className = "back";
-    // creo hijo de front e inserto imagen back
-    const imgBack = document.createElement('img');
-    imgBack.appendChild(back);
-    imgBack.className = "imgBack"
-    //insertar imagen 
-    back.setAttribute('src', './img/carta-1.png');
-    //creo hijo de imgBack insertar imagen de frente
+    
     const imgFront = document.createElement('img');
-    imgFront.appendChild(front);
-    imgFront.id = shuffle[i].id;
-    //insertar imagen 
-    front.setAttribute('src', shuffle[i].image);
+    front.appendChild(imgFront);
+    imgFront.className = "imgFront"
+
+    //insertar imagen back 
+    front.setAttribute('src', './img/carta-1.png');
+    //creo imgFront hijo de front insertar imagen 
+    const imgBack = document.createElement('img');
+    back.appendChild(imgBack);
+    imgBack.className="imgFront"
+    imgBack.id = shuffle[i].id;
+    //insertar imagen front  
+    back.setAttribute('src', shuffle[i].image);
     pokemonContainer.appendChild(card);
     card.appendChild(front);
     card.appendChild(back);
