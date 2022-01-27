@@ -24,11 +24,13 @@ const App = () => {
 
     //insertar imagen back 
     front.setAttribute('src', './img/carta-1.png');
+
     //creo imgFront hijo de front insertar imagen 
     const imgBack = document.createElement('img');
     back.appendChild(imgBack);
-    imgBack.className="imgFront"
+    imgBack.className="imgBack"
     imgBack.id = shuffle[i].id;
+
     //insertar imagen front  
     back.setAttribute('src', shuffle[i].image);
     pokemonContainer.appendChild(card);
@@ -36,8 +38,14 @@ const App = () => {
     card.appendChild(back);
 
     
+    const clickCard = () =>{
+      card.addEventListener('click').value
+    }
+    return clickCard
+
   }
   return pokemonContainer;
+
 }
 export default App;
 
