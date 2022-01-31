@@ -1,11 +1,24 @@
 import shuffle from '../shuffle.js';
 
+
 const App = () => {
+ 
 
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
-  // se crea funcion que muestra todas las cartas
+  var nombreUsuario = localStorage.getItem('nombreUsuario');
+  nombreUsuario = document.createElement('div');
+  var nombreContainer = document.createElement('div');
+  var containerCard= document.createElement('div');
+  containerCard.className = 'containerCard';
+  nombreUsuario.className ="nombreUsuario";
+  nombreContainer.className="nombreContainer";
+  pokemonContainer.appendChild(nombreContainer);
+  nombreContainer.appendChild(nombreUsuario);
+  pokemonContainer.appendChild(containerCard);
+  
+
 
     for (let i = 0; i < shuffle.length; i++) {
       //console.log(cardsTotal[i].id)
@@ -15,7 +28,7 @@ const App = () => {
       card.className = "card";
       front.className = "front";
       back.className = "back";
-      pokemonContainer.appendChild(card);
+      containerCard.appendChild(card);
       card.appendChild(back);
       card.appendChild(front);
       card.setAttribute("name", shuffle[i].id);
@@ -37,11 +50,15 @@ const App = () => {
       // console.log('Los siguientes pilotos van a comenzar la carrera:', this.drivers);
       //setTimeout(() => console.log('El ganador es', randomWinner(this.drivers)), 1000);
       //} 
+
+
+      ///selecciono la carta///
      //le agrego un evento a card, cada vez que hacemos un click sucede este evento
       card.addEventListener('click', (e)=> { 
-    // le agrego un clase togleCard, cuando se hace click
+    // le agrego un clase togleCard, animacion alternar
+    //si la clase toggleCard no existe la añade sino la elimina,usadala clase para la animacion
       card.classList.toggle("toggleCard");
-        
+        //cada vez que alterne la carta , verifico las cartas con e=evento
        checkCards(e)
       });
 
@@ -50,62 +67,53 @@ const App = () => {
         //guardamos los elementos que captura cuando hagamos click
       const clickCard = e.target;
       console.log(clickCard);
-        //agrego a la lista una clase flipped  cuando hace click 
+        //agrego a la lista una clase flipped (voltear)  
       clickCard.classList.add("flipped");
-      // creo constante y guardamos las cartas selecionadas en  un Node List de todo el elemento
+      // una constante y guardamos las cartas seleccionadas en  un Node List de la clase flipped para encontrar elementos que coincidan
         const flippedCards = document.querySelectorAll(".flipped");
+       // una constante y guardamos las cartas seleccionadas en  un Node List de la clase toggleCard para encontrar coincidencias
        const toggleCard = document.querySelectorAll(".toggleCard")
         console.log(flippedCards);
-        //si  logitud de la cartas clickedas es menor a 2
+        //si  logitud de la cartas clickedas es igual  a 2 en todos sus propiedades, solo se puede clickear 2 cartas
         if (flippedCards.length === 2) {
-          // ocurre lo siguiente
+          // ocurre lo siguiente si las cartas voltedas, con el atributo name coinciden
           if (flippedCards[0].getAttribute('name') ===
             flippedCards[1].getAttribute('name')
              ) {
+               //imprime match
               console.log('match');
+              // ejecuta la funcion por cada carta
               flippedCards.forEach((card) => {
+                // se remueve la clase flipped
              card.classList.remove('flipped');
+              // el puntero queda desactivado para no seleccionar las cartas match
              card.style.pointerEvents = 'none';
               });
             }
             else {
+              //imprime wrong
           console.log('wrong');
+          //ejecuta la funcion por cada carta
             flippedCards.forEach((card) => {
-              // remuevo el  flipped (volteado)cuando ya estamos
+              // remuevo el  flipped (volteado)cuando ya estan 2 cards voltedas
             card.classList.remove("flipped");
+            //le colocamos tiempo para la animacion
             setTimeout(() =>
+            // remueve el toggleCard la animacion en 1 segundo
             card.classList.remove("toggleCard"),1000);
                                    });
 
-             }
+                  }
           //las otras cartas restantes
-          //if (toggleCard === 12)
-                                       }
+         //if (toggleCard === 12){
+              //  }
+                                        }
                                }   
    }                           
 return pokemonContainer;
     }
 export default App;
 
-
-
-//var clickCard = [];
-//var matchCard = [];
-
-//if (shuffle[i].matched) {
-  //card.setAttribute('src', shuffle[i].image);
-//}
-
-// a card le agrego un evento para clickear las carta 
-//card.addEventListener('click', function () {
-  //si  logitud de la cartas clickedas es menor a 2
-  //if (clickCard.length === 2) {
-   // front.setAttribute('src', './img/carta-1.png')  //insertar imagen back 
-    //click car agrega con push a todas las cartas barajadas
-    //shuffle[i].push(clickCard);
-  //}
-//});
-//console.log(clickCard);
 
 
 

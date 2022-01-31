@@ -1,12 +1,24 @@
-
 import App from './components/App.js';
 
-//document.getElementById("aqui").addEventListener("click", function login() {
-    //tomar el elemento y cuando haga click pase lo siguiente:
+const buttonAqui = document.getElementById('aqui');
 
-//location.pathname = "src/pokemon.html";
-//})
+   buttonAqui.addEventListener('click', function () {
+     
+   let nombre =prompt('Jugador escribe tu nombre');
+    // con localStorage podemos guardar informacion y guardo los elementos ahi
+   localStorage.setItem('nombreUsuario', nombre);
+   //con getItems puedo traer los elementos
+var nombreUsuario = localStorage.getItem('nombreUsuario');
 
-//var starPokemon = () => {
-//document.getElementsByClassName(pokemonContainer);
-document.getElementById('root').appendChild(App());
+  sessionStorage.getItem("nombreUsuario");
+console.log(nombreUsuario);
+});
+ 
+
+   
+    
+
+ 
+ document.getElementById('root').appendChild(App());
+
+
