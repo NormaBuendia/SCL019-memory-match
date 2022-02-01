@@ -3,21 +3,39 @@ import shuffle from '../shuffle.js';
 
 const App = () => {
  
-
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
   var nombreUsuario = localStorage.getItem('nombreUsuario');
+  // nombre guardado 
+ sessionStorage.getItem("nombreUsuario");
+ //**** NO PODEMOS IMPRIMIR EL NOMBRE */
+  //const bienvenida = document.getElementsByID('span-bienvenida');
+ // bienvenida.textContent += nombreUsuario;
+
+  console.log(nombreUsuario);
+  
+  var popup = document.getElementById('popup');
+  var aqui = document.getElementById('aqui');
+  //var close=document.getElementById('close');
+  
+  aqui.addEventListener('click', function(){
+    popup.classList.add('hidden');
+    //close.classList.add('hidden');
+  });
+
   nombreUsuario = document.createElement('div');
   var nombreContainer = document.createElement('div');
   var containerCard= document.createElement('div');
+
   containerCard.className = 'containerCard';
   nombreUsuario.className ="nombreUsuario";
+
   nombreContainer.className="nombreContainer";
   pokemonContainer.appendChild(nombreContainer);
   nombreContainer.appendChild(nombreUsuario);
   pokemonContainer.appendChild(containerCard);
-  
+
 
 
     for (let i = 0; i < shuffle.length; i++) {
