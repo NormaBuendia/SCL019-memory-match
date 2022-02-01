@@ -1,4 +1,5 @@
 body{
+display: inline-flex;
 font-size:16px; 
 padding: 1 px 1 px 1px 1 px;
 margin:0;
@@ -91,19 +92,15 @@ max-height: 100%;
   background-color: thistle;
   transition: 0.5s;
 }
-main{
+section{
   display:flex;
   align-items: center;
-  background-image: url("./img/pikachu.background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  max-width: 100%;
   width: 100%;
   height: 120vh;
   background-color: rgba(152, 185, 245, 0);
  
 }
+
 .background{
 display: flex;
 align-items: center;
@@ -115,10 +112,10 @@ max-width: 100%;
 width: 100%;
 height: 120vh;
 margin: 0;
-padding: 0;
+background-color:rgba(0, 0, 0, 0.8);padding: 0;
 
 }
-
+/*
 .background:before {
 display: flex;
 content:'';
@@ -134,13 +131,15 @@ width: 100%;
 height: 120vh;
 background-color: rgba(152, 185, 245, 0.418);
 
-}
+}*/
+
 
 .container-popup{
 box-sizing: border-box;
 background-color:transparent;
 font-family: sans-serif;
 display: flex;
+position: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
@@ -243,18 +242,19 @@ h3{
 background-color:transparent;
 border: 0;
 border-radius: 30px;  
-animation: bouncel 5s alternate infinite ease-in;
+animation: bouncel 8s alternate infinite ease-in;
 }
 @keyframes bouncel {
 0%{
-transform:translate(20%);
+transform:translate(40%);
 } 
 100%{
-transform:traslate(20%);
+transform:traslate(40%);
 }
 }   
 /*base de pikachu en movimiento*/
 #jugamos{
+display: block;
 background-color:rgb(91, 91, 243);
 border-radius: 30px;
 font-family:sans-serif;
@@ -268,17 +268,27 @@ width: 100px;
 height: 150px;
 cursor: pointer;
 position: relative;
-left: -550px;
-top: -100px;
+left: -650px;
+top: -200px;
 }
 
-.texto-instrucciones{
-display: inline-block;
-justify-content: center;
-font-size: 20px;
-text-align: center;
-padding:7em 5em 0 0 ;
+#root{
+  display: flex;
+  position: flex;
+  align-items:flex-start;
+  justify-content: center;
+  font-size: 30px;
+  font-family: sans-serif;
+  position: relative;
+  margin-left:10px;
 }
+
+aside{
+display: flex;
+width: 185px;
+height: 100%;
+}
+
 
 h2{
 display: none;
@@ -294,63 +304,42 @@ border-style: rgba(34, 3, 3, 0.452);
 
 .pasos{
 display:block;
+position: flex;
 row-gap: 30px;
 flex-direction: column;
 align-items:center;
-justify-content: space-between;
-padding:25em 6em 0 0 ;
-gap: 30px 30px;
+padding-top: 210px;
+padding-right: 80px;
+margin: 0;
  
 }
+
 #paso1{
 display: block;
-max-width: 100%;
 width: 100%;
-height: 100%;
-border-radius: 0.625em; 
-background: rgb(116, 87, 87);
-font-family: sans-serif;
-font-style:normal;
-font-weight: 100;
-padding: 10px;
-font-size: 25px;
-text-align: center;
-line-height: 1.8em;
-color:rgb(197, 202, 207);
-box-shadow: 8px 16px 0 rgb(70, 66, 66);
-}  
-#paso2{
-display: block;
-max-width: 100%;
-width: 100%;
-height: 100%;
+height: 220%;
 border-radius: 0.625em; 
 background: rgb(116, 87, 87);
 font-family:sans-serif;
+text-align:center;
 font-style: normal;
-font-weight: 80;
-padding: 10px;
-font-size: 25px;
-text-align: center;
-line-height: 1.8em;
+font-size: 22px;
+padding: 8px;
 color:rgb(197, 202, 207);
 box-shadow: 8px 16px 0 rgb(70, 66, 66);
 } 
-#paso3{
-display:block;
-max-width: 100%;
-text-align: justify;
+#paso2{
+display:block ;
 width: 100%;
 height: 200%;
 border-radius:0.625em ;
 background: rgb(116, 87, 87);
-background-size: 500px;
 font-family: sans-serif;
 font-style: normal;
 font-weight: 100;
-padding: 10px;
+padding: 12px;
 margin-top: 30px;
-font-size: 25px;
+font-size: 22px;
 line-height: 1.5em;
 text-align:center;
 color:rgb(197, 202, 207);
@@ -386,16 +375,16 @@ width: 100%;
   
 .instagram{
 width: 5%;
-padding: 1.25em 0 0 30em;
+padding: 1.25em 0 0 35em;
 }
 /* El contenedor padre de la tarjeta invertida:  
 (elimine la perspectiva si no desea el efecto 3D */
 .containerCard{
     display:grid;
     flex-direction:column ;
-    grid-template-columns: 150px 150px 150px; 
-    grid-template-rows: 150px 150px 150px 150px;
-    gap: 60px;
+    grid-template-columns: 145px 145px 145px; 
+    grid-template-rows: 145px 145px 145px 145px;
+    gap: 35px;
     background-color: transparent;
     width: 100%;
     height: 100%;
@@ -406,7 +395,7 @@ padding: 1.25em 0 0 30em;
   position: relative;
   width: 100%;
   height: 100%;
-  left: 220px;
+  left: 150px;
   animation: initial 5s;
   transition: transform 0.8s;
   transform-style: preserve-3d;

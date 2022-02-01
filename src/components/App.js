@@ -8,10 +8,12 @@ const App = () => {
   pokemonContainer.className = 'pokemonContainer';
   var nombreUsuario = localStorage.getItem('nombreUsuario');
   // nombre guardado 
- sessionStorage.getItem("nombreUsuario");
+  sessionStorage.getItem("nombreUsuario");
+  //nombreUsuario = sessionStorage.get('nombre-usuario')
+  const bienvenida = document.getElementById('root')
+  bienvenida.textContent += nombreUsuario
  //**** NO PODEMOS IMPRIMIR EL NOMBRE */
-  //const bienvenida = document.getElementsByID('span-bienvenida');
- // bienvenida.textContent += nombreUsuario;
+ ;
 
   console.log(nombreUsuario);
   
@@ -20,8 +22,8 @@ const App = () => {
   //var close=document.getElementById('close');
   
   aqui.addEventListener('click', function(){
-    popup.classList.add('hidden');
-    //close.classList.add('hidden');
+  popup.classList.add('hidden');
+   //close.classList.remove('hidden');
   });
 
   nombreUsuario = document.createElement('div');
