@@ -6,19 +6,19 @@ const App = () => {
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
-  var nombreUsuario = localStorage.getItem('nombreUsuario');
+  let nombreUsuario = localStorage.getItem('nombreUsuario');
   // nombre guardado 
   sessionStorage.getItem("nombreUsuario");
   //nombreUsuario = sessionStorage.get('nombre-usuario')
-  const bienvenida = document.getElementById('root')
-  bienvenida.textContent += nombreUsuario
+  //const bienvenida = document.getElementsByClassName('nombreUsuario');
+  //bienvenida.textContent += nombreUsuario;
     //**** NO PODEMOS IMPRIMIR EL NOMBRE */
-    ;
+  
 
-  console.log(nombreUsuario);
+  //console.log(nombreUsuario);
 
-  var popup = document.getElementById('popup');
-  var aqui = document.getElementById('aqui');
+  let popup = document.getElementById('popup');
+  let aqui = document.getElementById('aqui');
   //var close=document.getElementById('close');
 
   aqui.addEventListener('click', function () {
@@ -27,8 +27,8 @@ const App = () => {
   });
 
   nombreUsuario = document.createElement('div');
-  var nombreContainer = document.createElement('div');
-  var containerCard = document.createElement('div');
+  let nombreContainer = document.createElement('div');
+  let containerCard = document.createElement('div');
 
   containerCard.className = 'containerCard';
   nombreUsuario.className = "nombreUsuario";
@@ -38,8 +38,7 @@ const App = () => {
   nombreContainer.appendChild(nombreUsuario);
   pokemonContainer.appendChild(containerCard);
 
-
-
+ 
   for (let i = 0; i < shuffle.length; i++) {
     //console.log(cardsTotal[i].id)
     const card = document.createElement('div');
