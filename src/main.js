@@ -1,6 +1,6 @@
 import App from './components/App.js';
 
-const buttonAqui = document.getElementById('aqui');
+/*const buttonAqui = document.getElementById('aqui');
 
    buttonAqui.addEventListener('click', function () {
     
@@ -12,17 +12,18 @@ const buttonAqui = document.getElementById('aqui');
   sessionStorage.getItem("nombreUsuario");
    //console.log(nombreUsuario);
 
-});
-/*const buttonAqui = document.getElementById("aqui");
-document.getElementById("aqui").addEventListener("click", function login(){
-    //tomar el elemento y cuando haga click pase lo siguiente:
-let nombre = document.getElementById("name").value;
-localStorage.setItem('nombreUsuario', nombre);
-sessionStorage.getItem("nombreUsuario");
-//sacar el texto que tiene el mensaje y darle el valor
+});*/
+const buttonAqui = document.getElementById("aqui");
+buttonAqui.addEventListener('click', function () {
 
+//tomar el elemento y cuando haga click pase lo siguiente:
+let nombre = document.getElementById("input").value;
+let bienvenida = document.getElementsById('input');
+bienvenida.textContent += nombre;
+console.log (nombre); 
 });
-}*/
+
+
  document.getElementById('root').appendChild(App());
 
 
