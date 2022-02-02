@@ -130,14 +130,26 @@ const App = () => {
 
         //FALTA LLAMAR AL WIN POPUP AL FINAL DEL JUEGO
          if (toggleCards.length === 12) {
-        window.alert(" Ganaste! ");
+        //window.alert(" Ganaste! ");
     
           
-        //    const overlay = document.getElementsById("overlay").innerHTML;
+          const overlay = document.querySelector(".overlay");
            
-        //   const popUpWin = document.getElementById("winPopUp").innerHTML;
-         
+          const popUpWin = document.querySelector(".winPopUp");
+    
+          const button = document.getElementById("restart");
           
+          
+          popUpWin.style.display = "block";
+          overlay.style.display = "block";
+          
+          button.addEventListener('click', () => {
+            popUpWin.style.display = "none";
+            overlay.style.display = "none";
+            
+            location.reload();
+
+          })
   
     
          };
