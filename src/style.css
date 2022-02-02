@@ -1,5 +1,5 @@
-
 body{
+display: inline-flex;
 font-size:16px; 
 padding: 1 px 1 px 1px 1 px;
 margin:0;
@@ -92,9 +92,17 @@ max-height: 100%;
   background-color: thistle;
   transition: 0.5s;
 }
+section{
+  display:flex;
+  align-items: center;
+  width: 100%;
+  height: 120vh;
+  background-color: rgba(152, 185, 245, 0);
+ 
+}
 
-main{
-display: inline-flex;
+.background{
+display: flex;
 align-items: center;
 background-image: url("./img/pikachu.background.png");
 background-size: cover;
@@ -104,101 +112,224 @@ max-width: 100%;
 width: 100%;
 height: 120vh;
 margin: 0;
-padding: 0;
+background-color:rgba(0, 0, 0, 0.8);padding: 0;
+
+}
+/*
+.background:before {
+display: flex;
+content:'';
+position: absolute; 
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+top: 449px;
+bottom: 0;
+left: 0;
+right: 0;
+width: 100%;
+height: 120vh;
+background-color: rgba(152, 185, 245, 0.418);
+
+}*/
+
+
+.container-popup{
+box-sizing: border-box;
+background-color:transparent;
+font-family: sans-serif;
+display: flex;
+position: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+width: 90%;
+max-width: 1000px;
+max-height: 100%;
+margin:-10px;
+}
+
+.popup{
+ display:flex;
+ /* formato rbga trasnparencia de 0.2 como un 20%*/
+ background-color:rgba(0, 0, 0, 0.2);
+ align-items: center;
+ justify-content: center;
+ position: fixed;
+ top:0;
+ left:0;
+ right: 0;
+ height: 120vh;
+ width: 100%;
+ visibility:visible;
+/**/
+}
+.popup.hidden{
+visibility: hidden;
+}
+
+.close.hidden{
+  visibility: hidden;
+}
+
+button{
+  width: 80px;
+  height: 40px;
+  background-color: grey;
+}
+
+#aqui{
+  background-color:rgb(139, 137, 135);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 2);
+  font-family:sans-serif;
+  max-width: 100%;
+  max-height: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  color: #08436d;  
+  position: relative;
+  left: -10px;
+  top: -10px;
+}
+.modal{
+  background-color: rgba(227, 237, 243, 0.685);
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: -250px;
+  padding-left: 20px;
+  border-radius: 3px;
+  margin-left: 10px;
+  box-shadow: 6px 12px 0px rgba(70, 6, 6, 0.3);
+  text-align: center;
+  cursor: pointer;
+}
+.modal .cerrar-popup {
+  font-size: 16px;
+  line-height: 16px;
+  display: block; /* el enlace abarque todo el espacio disponible
+  y pueda colocar el texto a la derecha con text alig*/
+  text-align: right;
+  padding-right: -30px;
+  color:#110303;
+  transition: .3s ease all;/*de 3 seg con una funsion ease para todas
+  las propiedades*/
+  
+}
+.modal .cerrar-popup:hover {  
+  color:#000;
 }
 
 h1{
-display: none;
+display:flex;
 list-style:6.25em;
-width: 8.75em;
 text-align: center;
-height: 93.75em;
-top: 25em;
-font-size:1.875em;   
+text-decoration-style: double;
+font-weight: bold;
+padding: 10px 10px;
+font-size:20px; 
+margin:0;
+ 
 }
-#aqui{
-display:none;
-width: 6.25em;
-height: 2.1875em;
-left: 350px;
-top: 530px;
+h3{
+  opacity: 0.5; 
+  font-size:18px ;
+}
+
+.pikachu{
+background-color:transparent;
+border: 0;
+border-radius: 30px;  
+animation: bouncel 8s alternate infinite ease-in;
+}
+@keyframes bouncel {
+0%{
+transform:translate(40%);
+} 
+100%{
+transform:traslate(40%);
+}
+}   
+/*base de pikachu en movimiento*/
+#jugamos{
+display: block;
+background-color:rgb(91, 91, 243);
+border-radius: 30px;
 font-family:sans-serif;
 font-style: normal;
 font-weight: 800;
-font-size: 1.25em;
-line-height: 1.4375em;
-color: #238DD9;
-
-}
-
-.texto-instrucciones{
-display: inline-block;
+border: transparent;;
+pointer-events: none;
+font-size: 20px;
 text-align: center;
-padding:27em 0 0 0 ;
+width: 100px;
+height: 150px;
+cursor: pointer;
+position: relative;
+left: -650px;
+top: -200px;
 }
+
+#root{
+  display: flex;
+  position: flex;
+  align-items:flex-start;
+  justify-content: center;
+  font-size: 30px;
+  font-family: sans-serif;
+  position: relative;
+  margin-left:10px;
+}
+
+aside{
+display: flex;
+width: 185px;
+height: 100%;
+}
+
 
 h2{
+display: none;
 position:flex;
 font-family:sans-serif;
 font-style: normal;
 font-weight: 800;
 font-size: 1.875em;
-border-style: black;
 line-height: 1.125em;
-color: lightyellow;
-border-style: rgb(243, 231, 231);   
+color:bisque;
+border-style: rgba(34, 3, 3, 0.452);   
 }
 
 .pasos{
-display: flex;
+display:block;
+position: flex;
+row-gap: 30px;
 flex-direction: column;
 align-items:center;
-justify-content: space-between;
-padding:25em 6em 0 0 ;
-gap: 30px 30px;
+padding-top: 210px;
+padding-right: 80px;
+margin: 0;
  
 }
+
 #paso1{
-display:flex;
-justify-self:center;
-align-items: center;
-max-width: 100%;
+display: block;
 width: 100%;
-height: 100%;
-border-radius: 0.625em; 
-background: rgb(116, 87, 87);
-font-family: sans-serif;
-font-style:normal;
-font-weight: 100;
-font-size: 1.5em;
-text-align: center;
-line-height: 1.8em;
-color:rgb(197, 202, 207);
-box-shadow: 8px 16px 0 rgb(70, 66, 66);
-}  
-#paso2{
-display: flex;
-justify-self:center;
-align-items: center;
-max-width: 100%;
-width: 100%;
-height: 100%;
+height: 220%;
 border-radius: 0.625em; 
 background: rgb(116, 87, 87);
 font-family:sans-serif;
+text-align:center;
 font-style: normal;
-font-weight: 80;
-font-size: 1.5em;
-text-align: center;
-line-height: 1.8em;
+font-size: 22px;
+padding: 8px;
 color:rgb(197, 202, 207);
 box-shadow: 8px 16px 0 rgb(70, 66, 66);
 } 
-#paso3{
-display: flex;
-justify-self:center;
-align-items: center;
-max-width: 100%;
+#paso2{
+display:block ;
 width: 100%;
 height: 200%;
 border-radius:0.625em ;
@@ -206,7 +337,9 @@ background: rgb(116, 87, 87);
 font-family: sans-serif;
 font-style: normal;
 font-weight: 100;
-font-size: 1.8em;
+padding: 12px;
+margin-top: 30px;
+font-size: 22px;
 line-height: 1.5em;
 text-align:center;
 color:rgb(197, 202, 207);
@@ -242,15 +375,16 @@ width: 100%;
   
 .instagram{
 width: 5%;
-padding: 1.25em 0 0 30em;
+padding: 1.25em 0 0 35em;
 }
 /* El contenedor padre de la tarjeta invertida:  
 (elimine la perspectiva si no desea el efecto 3D */
-.pokemonContainer{
+.containerCard{
     display:grid;
-    grid-template-columns: 150px 150px 150px; 
-    grid-template-rows: 150px 150px 150px 150px;
-    gap: 60px;
+    flex-direction:column ;
+    grid-template-columns: 145px 145px 145px; 
+    grid-template-rows: 145px 145px 145px 145px;
+    gap: 35px;
     background-color: transparent;
     width: 100%;
     height: 100%;
@@ -262,12 +396,14 @@ padding: 1.25em 0 0 30em;
   width: 100%;
   height: 100%;
   left: 150px;
+  animation: initial 5s;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 /* Haz un volteo horizontal cuando mueves el mouse sobre el contenedor de la caja volteada */
-/*.card:hover , .card{
-  transform: rotateY(180deg);
+.card:hover , .card{
+  /*transform: rotateY(180deg);*/
   transition: transform 1s;
   transition-duration: 0.5s;
 }*/
@@ -280,6 +416,9 @@ padding: 1.25em 0 0 30em;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
     pointer-events: none;
+    border-radius: 35px;
+    border-width: 2px;
+    border-style:solid;
 }
 /*  lado front  */
 .front {
@@ -292,14 +431,14 @@ padding: 1.25em 0 0 30em;
   transform: rotateY(180deg);
   transition-duration: 0.5s;
   transition: transform 0.5s;
-  border-radius: 20px;
+  background-color:rgb(50, 170, 245);
 }
 /* Estilo de la parte de front */
 .front:hover {
-  box-shadow: 0 0 30px 20px rgb(255, 255, 255);
-  /*transform: rotateY( 180deg ) ;
+  box-shadow: 0 0 30px 20px rgba(250, 246, 246, 0.651);
+  /*transform: rotateY( 180deg ) ;*/
   transition-duration: 1s;
-  transition: transform 1s;*/
+  transition: transform 1s;
   backface-visibility:hidden;
   }
   /* Estilo de la parte de back */
@@ -307,14 +446,21 @@ padding: 1.25em 0 0 30em;
   /*transform: rotateY(180deg);*/
   transform: scale(.97);
   transition: transform 0.5s;
-  /*transition-duration: 1s;*/
-  box-shadow: 0 0 30px 20px rgb(255, 255, 255);
+  transition-duration: 1s;
+  box-shadow: 0 0 30px 20px rgba(255, 255, 255, 0.596);
   backface-visibility:hidden;
   }
 
-
-  .toggleCard{
+  .toggleCard {
     transform: rotateY(180deg);
   }
 
-  
+  .nombreContainer{
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   font-size: 20px;
+   padding-top: 50px;
+   margin-top: -50px;
+   
+  }
