@@ -10,3 +10,4 @@ import App from './components/App.js';
 //var starPokemon = () => {
 //document.getElementsByClassName(pokemonContainer);
 document.getElementById('root').appendChild(App());
+

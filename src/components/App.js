@@ -3,7 +3,6 @@ import shuffle from '../shuffle.js';
 const App = () => {
 
 
-
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
@@ -19,52 +18,104 @@ const App = () => {
     pokemonContainer.appendChild(card);
     card.appendChild(back);
     card.appendChild(front);
-
+    card.setAttribute("name", shuffle[i].id);
 
     const imgFront = document.createElement('img');
     front.appendChild(imgFront);
     imgFront.className = "imgFront"
-    front.setAttribute('src', shuffle[i].image);//insertar imagen front  
-
-      //creo imgFront hijo de front insertar imagen 
+    back.setAttribute('src', shuffle[i].image, 'id', 'name');//insertar imagen front  
+    
+    
+    //creo imgFront hijo de front insertar imagen 
     const imgBack = document.createElement('img');
-    back.setAttribute('src', './img/carta-1.png')  //insertar imagen back 
+    front.setAttribute('src', './img/carta-1.png')  //insertar imagen back 
     back.appendChild(imgBack);
     imgBack.className = "imgFront"
     imgBack.id = shuffle[i].id;
 
-    // FUNCION FLECHA
-    //init: function () {
-    // console.log('Los siguientes pilotos van a comenzar la carrera:', this.drivers);
-    //setTimeout(() => console.log('El ganador es', randomWinner(this.drivers)), 1000);
-    //} 
-    // tenemos 2 variables, clickCard y matchCard que son igual a un array
-
-    var clickCard = []
-    //var matchCard = [];
-    // a card le agrego un evento para clickear las carta 
-    card.addEventListener('click', function () {
-      //si  logitud de la cartas clickedas es menor a 2
-      if (clickCard.length < 2) {
-        back.setAttribute('src', './img/carta-1.png')  //insertar imagen back 
-        //click car agrega con push a todas las cartas barajadas
-        //clickCard.push(shuffle[i]);
-        }
-        });
-       //console.log(clickCard);
+   
 
 
+    card.addEventListener('click', (e) => {
+      card.classList.toggle("toggleCard");
+      checkCards(e);
+
+    });
+
+
+    //Check Cards
+
+    const checkCards = (e) => {
+      //console.log(e);
+      const clickedCard = e.target;
+     
+      clickedCard.classList.add("flipped");
+      const flippedCards = document.querySelectorAll(".flipped");
+      const toggleCards = document.querySelectorAll(".toggleCard");
+      //console.log(flippedCards);
+
+
+      //Match
+     
+
+     if (flippedCards.length === 2) {
+       if (
+         flippedCards[0].getAttribute("name") === 
+       flippedCards[1].getAttribute("name")
+       ) {
+         //console.log("match");
+         flippedCards.forEach((card) => {
+           card.classList.remove("flipped");
+           card.style.pointerEvents = "none";
+         });
+      } else {
+         //console.log("wrong");
+         flippedCards.forEach((card) =>{
+           card.classList.remove("flipped");
+           setTimeout(() => card.classList.remove("toggleCard"), 1000);
+         });
+       }
+
+
+     };
+
+     if(toggleCards.length === 12 ) {
+        window.alert(" Ganaste! ");
+
+        const modalWin= document.createElement('div');
+        modalWin.className = 'modalWin';
+        
+
+     };
+    
+
+
+    };
+
+  } return pokemonContainer;
 
 
 
-      }
-
-      return pokemonContainer;
 
 
 
 
-    }
+
+
+  //console.log(clickCard);
+
+
+
+
+
+
+}
+
+
+
+
+
+
 
 
 export default App;
