@@ -402,11 +402,12 @@ padding: 1.25em 0 0 35em;
   cursor: pointer;
 }
 /* Haz un volteo horizontal cuando mueves el mouse sobre el contenedor de la caja volteada */
-.card:hover , .card{
+/*.card:hover , .card{
   /*transform: rotateY(180deg);*/
-  transition: transform 1s;
+  /*transition: transform 1s;
   transition-duration: 0.5s;
-}
+}*/
+
 /* Posiciona el front y el back */
 .front, .back {
     position: absolute;
@@ -442,7 +443,7 @@ padding: 1.25em 0 0 35em;
   }
   /* Estilo de la parte de back */
   .back:hover {
-  transform: rotateY(180deg);
+  /*transform: rotateY(180deg);*/
   transform: scale(.97);
   transition: transform 0.5s;
   transition-duration: 1s;
@@ -462,4 +463,55 @@ padding: 1.25em 0 0 35em;
    padding-top: 50px;
    margin-top: -50px;
    
+  }
+
+  .overlay{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display:none;
+  }
+
+  .winPopUp {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    background: rgb(243, 217, 144);
+    margin: 10% auto;
+    padding: 20px;
+    position: relative;
+  }
+
+  .close-winPopUp {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+  }
+
+  .winPopUp a{
+    background: salmon;
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    margin: 30px auto;
+    display: block;
+    width: 50%;
+  }
+
+  .winPopUp a:hover {
+    background: palevioletred;
+    transition: all 0.2s;
+}
+
+  .imgWin{
+    width: 50%;
+    height: 50%;
+
   }
