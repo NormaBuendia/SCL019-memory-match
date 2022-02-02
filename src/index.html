@@ -18,9 +18,9 @@
         <a href="#" class="home">&#x02261 HOME</a>
         <!--Este sera el menu que llevara al HOME-->
         <ul class="nav-menu">
-          <a href="#" class="nav-menu-link"> REGISTRO </a>
-          <a href=pokemon.html class="nav-menu-link"> VIDEOS </a>
-          <a href="#" class="nav-menu-link"> ENLACES </a>
+          <!--<a href="#" class="nav-menu-link"> REGISTRO </a>-->
+          <a href="#" class="nav-menu-link"> VIDEOS </a>
+          <a href="https://pokemongolive.com/es/" class="nav-menu-link"> ENLACES </a>
         </ul>
       </nav>
     </header>
@@ -65,6 +65,20 @@
           </div>
         </div>
       </aside>
+
+      <!--SE AGREGA MODAL PARA VOLVER A JUGAR-->
+    <div class ="overlay" id="overlay">
+      <div class ="winPopUp" id="winPopUp">
+        <div class ="close-winPopUp" id="close-winPopUp">x</div>
+        <div class = "winText" id="winText">
+          <h3>FELICIDADES</h3>
+          <h4>ERES UN MAESTRO POKEMON</h4>
+          <img class="imgWin" src="img/1200px-Ash_(Pocket_Monsters).png" alt="imgWin" id="imgWin">
+          <a href="index.html" class="restart"> Volver a Jugar </a>
+        </div>
+      </div>
+    </div>
+
     </main>
     <footer class="footer">
       <div class="contenedor-imagenes">
@@ -79,7 +93,6 @@
 
       </div>
     </footer>
-
 
     <script src="main.js" type="module"></script>
 </body>
