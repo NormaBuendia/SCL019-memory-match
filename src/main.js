@@ -18,9 +18,11 @@ buttonAqui.addEventListener('click', function () {
 
 //tomar el elemento y cuando haga click pase lo siguiente:
 let nombre = document.getElementById("input").value;
-let bienvenida = document.getElementsById('input');
+const bienvenida = document.getElementsById('root');
+//bienvenida.textContent += nombreUsuario;
+//let bienvenida = document.getElementsById('input');
 bienvenida.textContent += nombre;
-console.log (nombre); 
+//console.log (nombre); 
 });
 
 

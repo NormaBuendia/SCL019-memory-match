@@ -10,7 +10,7 @@ const App = () => {
   // nombre guardado 
   sessionStorage.getItem("nombreUsuario");
   //nombreUsuario = sessionStorage.get('nombre-usuario')
-  //const bienvenida = document.getElementsByClassName('nombreUsuario');
+  //const bienvenida = document.getElementsById('root');
   //bienvenida.textContent += nombreUsuario;
     //**** NO PODEMOS IMPRIMIR EL NOMBRE */
   
@@ -139,9 +139,12 @@ const App = () => {
     
           const button = document.getElementById("restart");
           
-          
+          const close = document.querySelector(".close-winPopUp");
+
+
           popUpWin.style.display = "block";
           overlay.style.display = "block";
+          close.style.display = "block";
           
           button.addEventListener('click', () => {
             popUpWin.style.display = "none";
