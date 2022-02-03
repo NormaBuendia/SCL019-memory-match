@@ -214,7 +214,7 @@ button{
  font-size: 18px;
  border-radius: 2px;
  text-align: center;
- border: 1px solid #bbbbbb;
+ /*border: 1px solid #bbbbbb;*/
  cursor: pointer;
   }
 
@@ -468,13 +468,14 @@ padding: 1.25em 0 0 45em;
     transform: rotateY(180deg);
   }
 
-  .nombreContainer{
-   display: flex; 
+  .usuario{
+   
+   position: absolute;
    justify-content: center;
    align-items: center;
    font-size: 20px;
    padding-top: 50px;
-   margin-top: -50px;
+   margin-top: -10 px;
    
   }
 

@@ -6,9 +6,9 @@ const App = () => {
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
-  let nombreUsuario = localStorage.getItem('nombreUsuario');
+  //let nombreUsuario = localStorage.getItem('nombreUsuario');
   // nombre guardado 
-  sessionStorage.getItem("nombreUsuario");
+  //sessionStorage.getItem("nombreUsuario");
   //nombreUsuario = sessionStorage.get('nombre-usuario')
   //const bienvenida = document.getElementsByClassName('nombreUsuario');
   //bienvenida.textContent += nombreUsuario;
@@ -26,16 +26,16 @@ const App = () => {
     //close.classList.remove('hidden');
   });
 
-  nombreUsuario = document.createElement('div');
+  //nombreUsuario = document.createElement('div');
   let nombreContainer = document.createElement('div');
   let containerCard = document.createElement('div');
 
   containerCard.className = 'containerCard';
-  nombreUsuario.className = "nombreUsuario";
+  //nombreUsuario.className = "nombreUsuario";
 
-  nombreContainer.className = "nombreContainer";
-  pokemonContainer.appendChild(nombreContainer);
-  nombreContainer.appendChild(nombreUsuario);
+  //nombreContainer.className = "nombreContainer";
+  //pokemonContainer.appendChild(nombreContainer);
+  //nombreContainer.appendChild(nombreUsuario);
   pokemonContainer.appendChild(containerCard);
 
  
