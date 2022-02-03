@@ -6,44 +6,36 @@ const App = () => {
   // contenedor padre del juego
   const pokemonContainer = document.createElement('div');
   pokemonContainer.className = 'pokemonContainer';
-  let nombreUsuario = localStorage.getItem('nombreUsuario');
-  // nombre guardado 
-  sessionStorage.getItem("nombreUsuario");
-  //nombreUsuario = sessionStorage.get('nombre-usuario')
-  //const bienvenida = document.getElementsById('root');
-  //bienvenida.textContent += nombreUsuario;
-    //**** NO PODEMOS IMPRIMIR EL NOMBRE */
   
-
-  //console.log(nombreUsuario);
-
+   //****activar popup de bienvenida****//
+  //creamos los elementos
   let popup = document.getElementById('popup');
   let aqui = document.getElementById('aqui');
-  //var close=document.getElementById('close');
-
+  let close = document.getElementById('cerrar-popup');
+  //agregamos un evento cuando se hace click en boton aqui
   aqui.addEventListener('click', function () {
     popup.classList.add('hidden');
-    //close.classList.remove('hidden');
+  });
+  //agregamos un evento cuando se hace click en boton X
+  close.addEventListener('click', function () {
+  popup.classList.add('hidden');
   });
 
-  nombreUsuario = document.createElement('div');
-  let nombreContainer = document.createElement('div');
+  
+  //hijo de pokemon Container
   let containerCard = document.createElement('div');
-
   containerCard.className = 'containerCard';
-  nombreUsuario.className = "nombreUsuario";
-
-  nombreContainer.className = "nombreContainer";
-  pokemonContainer.appendChild(nombreContainer);
-  nombreContainer.appendChild(nombreUsuario);
+  
   pokemonContainer.appendChild(containerCard);
 
- 
+ // creamos el bucle para crear las cartas
   for (let i = 0; i < shuffle.length; i++) {
-    //console.log(cardsTotal[i].id)
+   
+    //creamos los elemntos para ver las cartas
     const card = document.createElement('div');
     const front = document.createElement('img');
     const back = document.createElement('img');
+    //creamos las clases
     card.className = "card";
     front.className = "front";
     back.className = "back";
@@ -52,30 +44,13 @@ const App = () => {
     card.appendChild(front);
     card.setAttribute("name", shuffle[i].id);
 
-    const imgFront = document.createElement('img');
-    front.appendChild(imgFront);
-    imgFront.className = "imgFront"
     back.setAttribute('src', shuffle[i].image, 'id', 'name');//insertar imagen front  
 
-    //creo imgFront hijo de front insertar imagen 
-    const imgBack = document.createElement('img');
     front.setAttribute('src', './img/carta-1.png')  //insertar imagen back 
-    back.appendChild(imgBack);
-    imgBack.className = "imgFront"
-    imgBack.id = shuffle[i].id;
-
-    // FUNCION FLECHA
-    //init: function () {
-    // console.log('Los siguientes pilotos van a comenzar la carrera:', this.drivers);
-    //setTimeout(() => console.log('El ganador es', randomWinner(this.drivers)), 1000);
-    //} 
-
-
-    ///selecciono la carta///
-    //le agrego un evento a card, cada vez que hacemos un click sucede este evento
+    
     card.addEventListener('click', (e) => {
       // le agrego un clase togleCard, animacion alternar
-      //si la clase toggleCard no existe la añade sino la elimina,usadala clase para la animacion
+      //si la clase toggleCard no existe la añade sino la elimina,usa la clase para la animacion
       card.classList.toggle("toggleCard");
       //cada vez que alterne la carta , verifico las cartas con e=evento
       checkCards(e)
@@ -85,15 +60,15 @@ const App = () => {
     const checkCards = (e) => {
       //guardamos los elementos que captura cuando hagamos click
       const clickCard = e.target;
-      console.log(clickCard);
+      //console.log(clickCard);
       //agrego a la lista una clase flipped (voltear)  
       clickCard.classList.add("flipped");
       // una constante y guardamos las cartas seleccionadas en  un Node List de la clase flipped para encontrar elementos que coincidan
       const flippedCards = document.querySelectorAll(".flipped");
       // una constante y guardamos las cartas seleccionadas en  un Node List de la clase toggleCard para encontrar coincidencias
-      const toggleCard = document.querySelectorAll(".toggleCard");
+      
       const toggleCards = document.querySelectorAll(".toggleCard");
-      console.log(flippedCards);
+      //console.log(flippedCards);
       //si  logitud de la cartas clickedas es igual  a 2 en todos sus propiedades, solo se puede clickear 2 cartas
       if (flippedCards.length === 2) {
         // ocurre lo siguiente si las cartas voltedas, con el atributo name coinciden
@@ -101,7 +76,7 @@ const App = () => {
           flippedCards[1].getAttribute('name')
         ) {
           //imprime match
-          console.log('match');
+          //console.log('match');
           // ejecuta la funcion por cada carta
           flippedCards.forEach((card) => {
             // se remueve la clase flipped
@@ -112,7 +87,7 @@ const App = () => {
         }
         else {
           //imprime wrong
-          console.log('wrong');
+          //console.log('wrong');
           //ejecuta la funcion por cada carta
           flippedCards.forEach((card) => {
             // remuevo el  flipped (volteado)cuando ya estan 2 cards voltedas
@@ -124,15 +99,10 @@ const App = () => {
           });
 
         }
-        //las otras cartas restantes
-        //if (toggleCard === 12){
-        //  }
-
-        //FALTA LLAMAR AL WIN POPUP AL FINAL DEL JUEGO
-         if (toggleCards.length === 12) {
-        //window.alert(" Ganaste! ");
-    
-          
+        //si el largo de las cartas es igual a 12
+        if (toggleCards.length === 12) {
+        //**** creamos el popup de despedida** */
+        //se crean los elementos//
           const overlay = document.querySelector(".overlay");
            
           const popUpWin = document.querySelector(".winPopUp");
@@ -141,21 +111,29 @@ const App = () => {
           
           const close = document.querySelector(".close-winPopUp");
 
-
+         // se les da el estilo display para poder imprimirlo
           popUpWin.style.display = "block";
           overlay.style.display = "block";
           close.style.display = "block";
-          
+          // se crea el evento cuando el boton hace click
           button.addEventListener('click', () => {
             popUpWin.style.display = "none";
             overlay.style.display = "none";
-            
-            location.reload();
 
-          })
-  
+            //se reinicia la pagina
+          location.reload();
+
+          });
+          // se crea un evento cuando se hace click en boton X
+          close.addEventListener('click', () => {
+
+            overlay.style.display = "none";
+            popUpWin.style.display = "none";
+          });
+
+
     
-         };
+        }
       }
 
       
