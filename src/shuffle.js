@@ -1,6 +1,6 @@
 import Pokemon from './data/pokemon/pokemon.js';
-//import flippedCards from './components/App.js';
-const shuffle = ()  => {
+
+export const shuffle = ()  => {
   const cardsItems = Pokemon.items;
   const cardsItemsTwo = Pokemon.items;
   const cardsTotal = cardsItems.concat(cardsItemsTwo);
@@ -17,18 +17,16 @@ const shuffle = ()  => {
 };
 
 
-// funcion hacer match
-//let cardSelection = new Set();
-//let card1= flippedCards[0].getAttribute('name');
-//let card2 = flippedCards[1].getAttribute('name');
-//let cardResult = card1===card2;
-//return cardResult
-//console.log(cardResult);
+// funcion para seleccionar 2 cartas
+export const cardSelection = (namecard1, namecard2 ) =>{
+// retorna
+return namecard1 === namecard2
 
+}
 
 
 
 
 
 //export default {shuffle, cardSelection};
-export default shuffle;
+//export default shuffle;

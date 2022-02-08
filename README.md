@@ -32,7 +32,7 @@ A continuacion nuestro prototipo de Baja Fidelidad
 ![Getting Started](src/img/PrototipoBaja2.jpg)
 
 # Prototipo de alta fidelidad
-
+![Getting Started](src/img/ScreenshotPrototipoAlta.png)
 https://www.figma.com/proto/6eLrWxVSAQsBTwNhDqWnXe/MEMORY-MATCH-2?node-id=2%3A12&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A12
 
 
