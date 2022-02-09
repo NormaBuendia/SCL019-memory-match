@@ -32,7 +32,7 @@ A continuacion nuestro prototipo de Baja Fidelidad
 ![Getting Started](src/img/PrototipoBaja2.jpg)
 
 # Prototipo de alta fidelidad
-![Getting Started](src/img/ScreenshotPrototipoAlta.png)
+![Getting Started](src/img/Screenshot_PrototipoAlta.png)
 https://www.figma.com/proto/6eLrWxVSAQsBTwNhDqWnXe/MEMORY-MATCH-2?node-id=2%3A12&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A12
 
 
@@ -41,4 +41,7 @@ https://www.figma.com/proto/6eLrWxVSAQsBTwNhDqWnXe/MEMORY-MATCH-2?node-id=2%3A12
 Hicimos un testeo de usabilidad y nos arrojo que la pagina no era responsive en algunas pantallas, como el de los celulares.
 Tambien nos indicaron que se le podria agregar un marcador de tiempo para hacerlo mas competitivo.
 
+# Test de Unitarios
 
+Creamos un modulo externo en un archivo shuffle.js, donde hicimos 2 funciones que despues las exportamos para llamarlas en App.js, donde  realizamos toda las declaraciones del DOM para ejecutar el memory match.
+El tener las funciones en un archvo js aparte nos permitio crear un test unitario para ambas funciones.

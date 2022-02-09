@@ -18,8 +18,9 @@ export const shuffle = ()  => {
 
 
 // funcion para seleccionar 2 cartas
+// se crea una funcion con dos parametros , que luego se van a comparar con todas sus propiedades
 export const cardSelection = (namecard1, namecard2 ) =>{
-// retorna
+// retorna un booleano, para comparar
 return namecard1 === namecard2
 
 }
@@ -29,4 +30,4 @@ return namecard1 === namecard2
 
 
 //export default {shuffle, cardSelection};
-//export default shuffle;
+//export default shuffle ();

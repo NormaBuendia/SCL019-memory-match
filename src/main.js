@@ -12,7 +12,8 @@ let nombreUsuario = document.getElementById("input").value;
 
 let usuario = document.createElement('div');
 usuario.className = "usuario";
-usuario.textContent = nombreUsuario;
+// un string ,Hola, sumado al valor de usuario 
+usuario.textContent = ' Hola ' + nombreUsuario;
 
 
 let nombreContainer = document.createElement('div');
