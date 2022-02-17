@@ -28,12 +28,12 @@ const App = () => {
 
   pokemonContainer.appendChild(containerCard);
 
-  // creamos el bucle para crear las cartas
+  // creamos la constante shuffle que trajimos de otro modulo, con toda la funcion shuffle
   const shuffle = shuffleFunction()
   //realizamos un ciclo para iterar sobre cada una de las cartas y formar la mesa de juego
   for (let i = 0; i < shuffle.length; i++) {
 
-    //creamos los elemntos para ver las cartas
+    //creamos los elementos para ver las cartas
     const card = document.createElement('div');
     const front = document.createElement('img');
     const back = document.createElement('img');
@@ -44,6 +44,7 @@ const App = () => {
     containerCard.appendChild(card);
     card.appendChild(back);
     card.appendChild(front);
+    // con esto la carta setea  los parametros que se le da
     card.setAttribute("name", shuffle[i].id);
 
     back.setAttribute('src', shuffle[i].image, 'id', 'name');//insertar imagen back 
@@ -74,7 +75,8 @@ const App = () => {
 
       //si  logitud de la cartas clickedas es igual  a 2 en todos sus propiedades, solo se puede clickear 2 cartas
       if (flippedCards.length === 2) {
-        //son las constantes que llamamos de shuffle.js donde hacemos la comparacion de 2 cartas
+        //son las constantes  donde hacemos la comparacion de 2 cartas
+        // aca las constantes muestran las cartas con get y toman el parametro name para poder hacer match
         const namecard1 = flippedCards[0].getAttribute('name');
         const namecard2 = flippedCards[1].getAttribute('name');
 
@@ -89,6 +91,7 @@ const App = () => {
             card.style.pointerEvents = 'none';
           });
         }
+        //ademas
         else {
           //ejecuta la funcion por cada carta
           flippedCards.forEach((card) => {
@@ -101,16 +104,16 @@ const App = () => {
           });
 
         }
-        //si el largo de las cartas es igual a 12
+        //si todas las cartas se dan vuelta
         if (toggleCards.length === 12) {
           //**** creamos el popup de despedida** */
-          //se crean los elementos//
+          //se selecciona el elemento con clase overlay 
           const overlay = document.querySelector(".overlay");
-
+          //se selecciona el elemento con clase overlay
           const popUpWin = document.querySelector(".winPopUp");
-
+          //se selecciona el elemento con id
           const button = document.getElementById("restart");
-
+          // se selecciona al elemento con la clase
           const close = document.querySelector(".close-winPopUp");
 
           // se les da el estilo display para poder imprimirlo
@@ -147,7 +150,6 @@ const App = () => {
   return pokemonContainer;
 }
 export default App;
-
 
 
 
