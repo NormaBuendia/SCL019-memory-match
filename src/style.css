@@ -339,6 +339,7 @@ box-shadow: 8px 16px 0 rgb(70, 66, 66, 0.5);
 
 .footer{
 background-color:lightgray; 
+
 }
 
 .contenedor-imagenes{
@@ -428,11 +429,9 @@ width: 100%;
   }
   
   .toggleCard:hover{
-    transform:scale(.8);
+    border-radius:35px ;
     box-shadow: 8px 16px 0 rgba(243, 238, 238, 0.5);
   }
-
-
 
   .usuario{
    background-color:rgb(197, 202, 207, 0.8) ;
