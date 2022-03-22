@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "pretest": "eslint .",
-    "test": "jest --coverage",
-    "start": "serve -s src/",
+    "test": "jest --coverage --verbose",
+    "start": "serve src/",
     "deploy": "gh-pages -d src"
   },
   "devDependencies": {
