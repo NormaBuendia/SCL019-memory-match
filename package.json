@@ -1,7 +1,7 @@
 {
-  "name": "memory-match",
+  "name": "norma",
   "version": "1.0.0",
-  "description": "Memory Match Game",
+  "description": "Norma",
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {
@@ -24,5 +24,8 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "firebase": "^9.6.7"
   }
 }
