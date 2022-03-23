@@ -1,7 +1,7 @@
 {
-  "name": "norma",
+  "name": "memory-match",
   "version": "1.0.0",
-  "description": "Norma",
+  "description": "Memory Match Game",
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {

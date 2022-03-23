@@ -1,26 +1,5 @@
+import App from './components/App.js';
 
-<<<<<<< HEAD
-import {router} from './Rutas/routes.js';
-//import { appInit } from './Rutas/configuFirebase.js';
-// Este es el punto de entrada de tu aplicacion
-
-// import { myFunction } from './Rutas/index.js';
-
-
-// myFunction();
-
-window.addEventListener('load', () => {
-    //const firebaseObject = appInit;
-    //appInit
-    router(window.location.hash );
-
-    window.addEventListener('hashchange', () => {
-    router(window.location.hash);
-    
-});
-
-});
-=======
 
 //*****creamos el popup de bienvenida ****/
 //seleciono el boton aqui
@@ -55,4 +34,3 @@ document.getElementById('root').appendChild(usuario);
  document.getElementById('root').appendChild(App());
 
 
->>>>>>> 9f6557ab02ee89b631939872c6c692d06dae47b1
